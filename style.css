@@ -1,0 +1,192 @@
+:root{
+    font-size: 62.5%;
+    --font-dm-sans: "DM Sans", sans-serif;
+    --font-montserrat: "Montserrat", sans-serif;
+    --font-dacing-script: "Dancing Script", cursive;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(45deg, #190361 0%, #B0F 100%);
+    animation: gradient 10s ease infinite;
+    background-size: 200% 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1, p{
+    color: #34355B;
+}
+
+.bisc-init{
+    background-color: #fff;
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+    border-radius: .5rem;
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);
+    animation: box-init 2s;
+}
+
+h1{
+    font-family: var(--font-montserrat);
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.4rem;
+}
+
+p{
+    font-family: var(--font-dm-sans);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 2.9rem;
+}
+
+h1, p, h2{
+    opacity: 0;
+    animation-name: elements-init;
+    animation: elements-init 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.bisc-init img{
+    padding-left: 2rem;
+}
+
+.bisc-init img:hover {
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+@keyframes box-init{
+    0%{
+        transform: translateY(calc(-100vh - 100px));
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes elements-init{
+    0%{
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 100;
+    }
+}
+
+@keyframes myAnim {
+	0%,
+	100% {
+		transform: rotate(0deg);
+		transform-origin: 50% 0;
+	}
+
+	10% {
+		transform: rotate(2deg);
+	}
+
+	20%,
+	40%,
+	60% {
+		transform: rotate(-4deg);
+	}
+
+	30%,
+	50%,
+	70% {
+		transform: rotate(4deg);
+	}
+
+	80% {
+		transform: rotate(-2deg);
+	}
+
+	90% {
+		transform: rotate(2deg);
+	}
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Screen 2 */
+.bisc-init2{
+    background-color: #FFF;
+    box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.80);
+    border-radius: .5rem;
+    padding: 4.8rem 6.4rem;
+    width: 42.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: box-init 2s;
+}
+
+h2{
+    color: #34355B;
+    font-family: var(--font-montserrat);
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1.7rem;
+}
+
+.msg{
+    background-color: #E4EDF1;
+    box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.50);
+    padding: 1.0rem;
+    margin-bottom: 6rem;
+}
+
+.msg p {
+    color: #000;
+    font-family: var(--font-dacing-script);
+    font-weight: 400;
+    font-size: 2.4rem;
+    text-align: center;
+}
+
+.link{
+    background-color: #FF9500;
+    padding: 1.6rem;
+    border-radius: 4px;
+    color: #FFF;
+    text-align: center;
+    font-family: var(--font-dm-sans);
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-top: 5.9rem;
+    text-decoration: none;
+    width: 17.4rem;
+    transition: background-color .5s;
+}
+
+.link:hover{
+    background-color: #e08402;
+}
+
+.hide{
+    display: none;
+}
